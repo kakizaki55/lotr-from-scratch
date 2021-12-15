@@ -15,6 +15,7 @@ export default function Characters() {
     };
     fetchData();
   }, [race, query]);
+  setQuery('');
 
   return (
     <div>
