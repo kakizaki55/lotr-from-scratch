@@ -11,6 +11,14 @@ export default function Characters() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const data = await fetchCharacters(race);
+      setCharacter(data);
+    };
+    fetchData();
+  }, [race]);
+
+  useEffect(() => {
+    const fetchData = async () => {
       const data = await fetchCharacters(race, query);
       setCharacter(data);
       setLoading(false);
@@ -18,7 +26,7 @@ export default function Characters() {
     if (loading) {
       fetchData();
     }
-  }, [race, query, loading]);
+  }, [query, loading, race]);
 
   return (
     <div>
