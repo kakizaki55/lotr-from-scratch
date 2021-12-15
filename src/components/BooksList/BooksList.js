@@ -1,4 +1,4 @@
-export default function BookList({ title }) {
+export default function BookList({ title, id, created_at }) {
   return (
     <div>
       <h1>Title:{title}</h1>
