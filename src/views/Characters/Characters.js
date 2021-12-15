@@ -5,7 +5,7 @@ import CharacterList from '../../components/CharacterList/CharacterList';
 
 export default function Characters() {
   const [character, setCharacter] = useState([]);
-  const [query, setQuery] = useState('lego');
+  const [query, setQuery] = useState('');
   const [race, setRace] = useState('All');
   const [loading, setLoading] = useState(true);
 
